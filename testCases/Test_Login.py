@@ -1,5 +1,5 @@
 
-import pytest
+# import pytest
 import time
 # from selenium import webdriver
 from pageObjects.LoginPage import LoginPage
@@ -12,11 +12,11 @@ class TestLogin:
     logger=LogGen.loggen()
 
 
-    @pytest.mark.regression
+    # @pytest.mark.regression
     def test_homepagetitle(self,setup):
         self.logger.info("********TestLogin******")
         self.logger.info("*****Verifying Home Page Title******")
-        self.driver=setup
+        self.driver= setup
         self.driver.get(self.baseURL)
         act_title=self.driver.title
         time.sleep(5)
@@ -31,8 +31,8 @@ class TestLogin:
            self.logger.info("*******Home Page Title is failed****")
            assert False
 
-    @pytest.mark.sanity
-    @pytest.mark.regression
+    # @pytest.mark.sanity
+    # @pytest.mark.regression
     def test_login(self,setup):
         self.logger.info("*****Verifying Login test****")
         self.driver = setup
@@ -53,6 +53,4 @@ class TestLogin:
           self.driver.close()
           self.logger.error("****Login test is failed****")
           assert False
-
-
-
+    #

@@ -3,6 +3,8 @@ import pytest
 
 @pytest.fixture()
 def setup(browser):
+    # driver=webdriver.Edge()
+    # return driver
     if browser=='chrome':
       driver=webdriver.Chrome()
     elif browser=='firefox':
